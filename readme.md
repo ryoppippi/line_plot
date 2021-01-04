@@ -11,6 +11,8 @@ Line の送信履歴から日毎の送信件数をまとめてグラフに Plot 
 - エクスポートしたテキストファイルを`line.txt`へ名称変更し、本レポジトリのルートディレクトリに配置(元の`line.txt`を置き換える)
 - `./run.sh`を実行
 
-
-
 [グラフサンプル](https://ryoppippi.github.io/line_plot/)
+
+# License
+
+The source code is licensed MIT. The website content is licensed CC BY 4.0,see LICENSE.
