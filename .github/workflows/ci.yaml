@@ -1,0 +1,25 @@
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/configure-pages@v1
+      - name: build index.html
+        run: docker compose up --build
+      - name: upload index.html
+        uses: actions/upload-pages-artifact@v2
+        with:
+          name: github-pages
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          artifact_name: github-pages
+
