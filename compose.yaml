@@ -1,0 +1,9 @@
+version: '3'
+services:
+  line_plot:
+    build: .
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
+
